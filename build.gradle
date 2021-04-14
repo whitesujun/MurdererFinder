@@ -20,7 +20,7 @@ plugins {
     id "1.0"
 }
 */
-version = "1.3"
+version = "1.4"
 group= "HappyAndJust" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "MurdererFinder"
 tasks.withType(JavaCompile) {
