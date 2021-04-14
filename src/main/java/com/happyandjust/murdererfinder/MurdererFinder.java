@@ -29,7 +29,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.2")
+@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.3")
 public class MurdererFinder {
     public final List<Item> sword_lists = new ArrayList<>();
     public String alpha = null;
@@ -78,6 +78,9 @@ public class MurdererFinder {
         sword_lists.add(Item.getItemFromBlock(Blocks.torch));
         sword_lists.add(Item.getItemFromBlock(Blocks.redstone_torch));
         sword_lists.add(Item.getItemFromBlock(Blocks.sponge));
+        sword_lists.add(Items.cooked_beef);
+        sword_lists.add(Item.getItemFromBlock(Blocks.double_plant));
+        sword_lists.add(Items.speckled_melon);
     }
 
     @SubscribeEvent
