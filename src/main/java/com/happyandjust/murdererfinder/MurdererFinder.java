@@ -15,6 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.scoreboard.ScorePlayerTeam;
 import net.minecraft.util.BlockPos;
+import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -29,7 +30,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.3")
+@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.4")
 public class MurdererFinder {
     public final List<Item> sword_lists = new ArrayList<>();
     public String alpha = null;
@@ -39,6 +40,7 @@ public class MurdererFinder {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
+        ClientCommandHandler.instance.registerCommand(new ToggleMurdererFinderCommand());
         if (ConfigHandler.hasKey("murderer", "toggle")) {
             ToggleMurdererFinderCommand.toggled = ConfigHandler.getBoolean("murderer", "toggle");
         }
