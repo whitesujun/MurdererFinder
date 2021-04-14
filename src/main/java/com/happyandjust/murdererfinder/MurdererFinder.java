@@ -106,8 +106,10 @@ public class MurdererFinder {
                     ItemStack itemStack = ((EntityArmorStand) en).getEquipmentInSlot(0);
                     if (itemStack != null) {
                         if (itemStack.getItem() == Items.bow) {
-                            color = new Color(229, 109, 5).getRGB();
-                            Utils.draw3DString(new BlockPos(en).add(0, 1, 0), "Bow", new Color(229, 109, 5).getRGB(), e.partialTicks);
+                            if (en.isInvisible()) {
+                                color = new Color(229, 109, 5).getRGB();
+                                Utils.draw3DString(new BlockPos(en).add(0, 1, 0), "Bow", new Color(229, 109, 5).getRGB(), e.partialTicks);
+                            }
                         }
                     }
                 }
