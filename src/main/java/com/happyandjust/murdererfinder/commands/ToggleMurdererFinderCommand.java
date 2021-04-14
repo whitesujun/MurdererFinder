@@ -12,7 +12,7 @@ public class ToggleMurdererFinderCommand extends CommandBase {
 
     @Override
     public String getCommandName() {
-        return "murdererfinder";
+        return "mm";
     }
 
     @Override
