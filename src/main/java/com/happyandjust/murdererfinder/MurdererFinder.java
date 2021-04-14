@@ -23,7 +23,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.0")
+@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.1")
 public class MurdererFinder {
     public static String alpha = null;
     public static Set<EntityPlayer> murderers = new HashSet<>();
