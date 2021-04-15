@@ -35,7 +35,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.5.2")
+@Mod(modid = "murdererfinder", name = "MurdererFinder", version = "1.5.3")
 public class MurdererFinder {
     public final List<Item> sword_lists = new ArrayList<>();
     public String alpha = null;
@@ -157,7 +157,7 @@ public class MurdererFinder {
                             if (inv.getItem() == Items.bow) {
                                 ItemStack cp = ep.getEquipmentInSlot(3);
                                 if (cp == null) {
-                                    if (!hasBow.contains(ep)) {
+                                    if (!hasBow.contains(ep) && !murderers.contains(ep)) {
                                         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§7[§cALERT§7] §e" + en.getName() + " §3has a bow!"));
                                         hasBow.add(ep);
                                     }
