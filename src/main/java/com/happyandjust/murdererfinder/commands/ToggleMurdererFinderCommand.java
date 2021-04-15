@@ -23,7 +23,7 @@ public class ToggleMurdererFinderCommand extends CommandBase {
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
         toggled = !toggled;
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("[" + (toggled ? "§a+" : "§c+") + "]"));
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText("§7[" + (toggled ? "§a+" : "§c-") + "§7]"));
         ConfigHandler.writeBooleanConfig("murderer", "toggle", toggled);
     }
 
